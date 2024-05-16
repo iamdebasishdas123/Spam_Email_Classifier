@@ -1,13 +1,28 @@
-import streamlit as st
-import pickle
-import string
-import nltk
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Install nltk if not already installed
+try:
+    import nltk
+except ImportError:
+    install('nltk')
+    import nltk
+
+# Now we can import the necessary modules from nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-# Download stopwords if not already present
+# Download stopwords and punkt if not already downloaded
 nltk.download('stopwords')
 nltk.download('punkt')
+
+import streamlit as st
+import pickle
+import string
 
 # Initialize PorterStemmer
 ps = PorterStemmer()
@@ -45,13 +60,13 @@ model = pickle.load(open('model.pkl', 'rb'))
 st.title('Email/SMS Classifier')
 input_sms = st.text_input('Enter your message')
 if st.button('Predict'):
-    # Preprocess input
+    # Preprocessing
     transformed_sms = transform_text(input_sms)
 
-    # Vectorize input
+    # Vectorization
     vector_input = tfidf.transform([transformed_sms])
 
-    # Predict
+    # Prediction
     result = model.predict(vector_input)[0]
 
     # Display result
