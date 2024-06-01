@@ -1,4 +1,4 @@
-### Spam Email Classifier Streamlit Link:scamemailcassifier-email
+### Spam Email Classifier Streamlit Link: scamemailcassifier-email
 .streamlit.app
 
 In this project, we aim to build a machine-learning model that can accurately distinguish between spam and ham (non-spam) messages. This comprehensive journey includes data cleaning, exploratory data analysis (EDA), text preprocessing, model building, and improvement. Finally, we'll discuss deployment to a website.
