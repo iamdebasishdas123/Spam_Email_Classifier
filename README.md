@@ -1,4 +1,4 @@
-## Spam Email Classifier Streamlit Link: https://jubilant-spork-r4pj44g7jgvhpr4-8501.app.github.dev/
+### Spam Email Classifier Streamlit Link: https://jubilant-spork-r4pj44g7jgvhpr4-8501.app.github.dev/
 # Building a Spam Detection Model Using Machine Learning
 
 In this project, we aim to build a machine-learning model that can accurately distinguish between spam and ham (non-spam) messages. This comprehensive journey includes data cleaning, exploratory data analysis (EDA), text preprocessing, model building, and improvement. Finally, we'll discuss deployment to a website.
